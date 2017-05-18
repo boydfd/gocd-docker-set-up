@@ -6,4 +6,5 @@ echo "HOST $host
 	UserKnownHostsFile=/dev/null
 " >> ./gocd-agent/config
 
+chmod 600 ./gocd-agent/config
 
