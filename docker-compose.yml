@@ -5,9 +5,9 @@ services:
     ports:
       - 18153:8153
       - 18154:8154
-    image: gocd/gocd-server
+    image: gocd/gocd-server:v17.4.0
     volumes:
-      - ./go:/etc/go
+      - ./go:/godata/config
     environment:
       - MSG_TIME=0
   agent:
