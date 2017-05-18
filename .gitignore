@@ -1,5 +1,5 @@
 .idea
-go
+godata
 certs
 gocd-agent
 pipelines.xml

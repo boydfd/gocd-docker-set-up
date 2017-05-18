@@ -7,7 +7,7 @@ services:
       - 8154:8154
     image: gocd/gocd-server:v17.4.0
     volumes:
-      - ./go:/godata/config
+      - ./godata:/godata
     environment:
       - MSG_TIME=0
   agent:
