@@ -24,7 +24,9 @@ A easy docker compose to start gocd automatically and easy migrate from original
 
 3. start init_gocd.sh
 
-4. (optional) if you want to ssh remote server through gocd agent, do these:
+4. don't forget to enable agent in gocd page manually.
+
+5. (optional) if you want to ssh remote server through gocd agent, do these:
 	1. create directory: `certs`
 	2. put you private key in certs directory
 	3. then you get this key when agent run task at path: `/home/go/certs`
