@@ -11,8 +11,6 @@ services:
     environment:
       - MSG_TIME=0
   agent:
-    build:
-      context: ./gocd-agent
     image: gocd/gocd-agent-alpine-3.5:v17.4.0
     environment:
       - GO_SERVER_URL="https://gocd-server:8154/go"
