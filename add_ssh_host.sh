@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+mkdir -p ./gocd-agent
 host=$1
 echo "HOST $host
 	StrictHostKeyChecking no
