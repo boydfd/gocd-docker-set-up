@@ -1,0 +1,23 @@
+version: "3"
+services:
+  server:
+    container_name: gocd-server
+    ports:
+      - 18153:8153
+      - 18154:8154
+    image: gocd/gocd-server
+    volumes:
+      - ./go:/etc/go
+    environment:
+      - MSG_TIME=0
+  agent:
+    build:
+      context: ./gocd-agent
+    image: gocd/gocd-agent-alpine-3.5:v17.4.0
+    environment:
+      - GO_SERVER_URL="https://gocd-server:8154/go"
+    links:
+      - server:gocd-server
+    volumes:
+      - ./certs:/home/go/certs
+      - ./gocd-agent/config:/home/go/.ssh/config

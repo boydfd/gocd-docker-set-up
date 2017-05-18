@@ -1,0 +1,5 @@
+.idea
+go
+certs
+gocd-agent
+pipelines.xml
